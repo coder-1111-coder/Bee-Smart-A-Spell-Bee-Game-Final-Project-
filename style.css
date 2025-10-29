@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('Images/6.BG.png');
+    color: black;
+    overflow: hidden;
+}
+
+/* //Layout */
+.heading1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: black;
+  height: 80px;
+  width: 200%;
+}
+.logo1 {
+    width: 70px;
+    margin-top: 20px;
+    position: absolute;
+    align-items: center;
+    left: 0;
+}
+
+.title-name1 {
+    width: 100px;
+    margin-left: 80px;
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+}
+
+/* Fonts */
+h1 {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #000;
+}
+
+h2 {
+    color: yellow;
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+:root{
+  --yellow: #ffd600;
+  --dark-bg: #2a1f00;
+  --panel: rgba(255, 255, 255, 0.07);
+  --text-main: #fff8d6;
+  --text-muted: #d3c68a;
+}
+
+.welcome-img{
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.container{
+  max-width: 95%;
+  text-align: center;
+}
+
+/*Card*/
+.card {
+    background-color:black;
+    width: 560px;
+    padding: 30px;
+    border-radius: 15px;
+    border-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-style: dashed ;
+    border-width: 4px;
+}
+
+
+/* Input fields */
+input[type="text"], textarea{
+  background: rgb(11, 10, 10);
+  color: white;
+  border: 1px solid rgb(245, 242, 242);
+  padding: 10px;
+  width: 70%;
+  margin: 8px auto;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.name-input:hover{
+  background: #ffcc00;
+  color: black;
+}
+
+textarea{
+  height: 90px;
+  resize: vertical;
+}
+
+/* BUTTONS */
+button{
+  cursor: pointer;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.primary{
+  background: var(--yellow);
+  color: #000;
+  margin: 8px;
+}
+
+.primary:hover{
+  background: #ffe85f;
+  transform: scale(1.05);
+}
+
+.secondary{
+  background: transparent;
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+  margin: 8px;
+}
+
+.secondary:hover{
+  background: var(--yellow);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Skip and back buttons*/
+button:active, button:focus{
+  outline: none;
+  transform: scale(0.97);
+}
+
+/*Avatar grid*/
+.avatar-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+}
+
+.avatar{
+  width: 90px;
+  height: 90px;
+  border-radius: 30px;
+  border: 3px solid transparent;
+  transition: 0.2s ease;
+}
+
+.avatar:hover{
+  transform: scale(2);
+}
+
+.avatar.selected{
+  border-color: var(--yellow);
+  box-shadow: 0 0 10px var(--yellow);
+}
+
+/*Flag Selection*/
+.flag-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.flag-btn{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 12px;
+  height: 90px;
+  width: 160px;
+  color: var(--text-main);
+  text-align: center;
+  transition: 0.2s;
+}
+
+.flag-btn img{
+  width: 70px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.flag-btn:hover{
+  transform: scale(1.05);
+  background: #ffcc0096;
+}
+
+.flag-btn.selected{
+  border: 2px solid;
+  border-color: var(--yellow);
+}
+
+
+/* Levels*/
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  grid-template-rows: repeat(2, 60px);
+  gap: 18px;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.level {
+  width: 180px;
+  height: 80px;          
+  border-radius: 14px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.2s;
+}
+.level-option {
+  text-align: center;
+}
+.level:hover {
+  transform: scale(1.05);
+  border-color: red;
+}
+
+/* Game Area*/
+.play-area{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.game-top{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  color: var(--text-muted);
+}
+
+#infoBar{
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* Result Area */
+
+.game-over-img{
+  width: 300px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+#resultArea{
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+/* Row Styling */
+.row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.hidden{
+  display: none !important;
+}

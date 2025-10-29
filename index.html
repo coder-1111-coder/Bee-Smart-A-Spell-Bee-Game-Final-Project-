@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐝 BeeSmart - The Spelling Bee Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="heading1">
+      <img src="Images/2.Logo.png" alt="BeeSmart Logo" class="logo1">
+      <img src="Images/5.Name.png" alt="BeeSmart Title" class="title-name1">
+    </header>
+    <section id="nameScreen" class="card">
+      <img src="images/4.Welcome.png" alt="Welcome" class="welcome-img">
+      <h2>Enter Your Name</h2>
+      <input type="text" id="playerName" placeholder="Type your name here..."class="name-input">
+      <div class="row">
+        <button id="nameNextBtn" class="primary">Next</button>
+      </div>
+    </section>
+    <section id="avatarScreen" class="card hidden">
+      <h2>Select Your Avatar</h2>
+      <div class="avatar-grid">
+        <img src="Images/7.Boy1.png" class="avatar">
+        <img src="Images/8.Boy2.png" class="avatar">
+        <img src="Images/9.Boy3.png" class="avatar">
+        <img src="Images/10.Girl1.png" class="avatar">
+        <img src="Images/11.Girl2.png" class="avatar">
+        <img src="Images/12.Girl3.png" class="avatar">
+      </div>
+
+      <div class="row">
+        <button id="avatarBackBtn" class="secondary">Back</button>
+        <button id="avatarNextBtn" class="primary">Next</button>
+      </div>
+    </section>
+    <section id="accentScreen" class="card hidden">
+      <h2>Choose Accent</h2>
+      <div class="flag-grid">
+
+        <div class="flag-btn" data-accent="en-IN">
+          <img src="Images/15.IND-Flag.png"><p>English (India)</p>
+        </div>
+      
+        <div class="flag-btn" data-accent="en-US">
+          <img src="Images/14.US-Flag.png"><p>English (US)</p>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <button id="accentBackBtn" class="secondary">Back</button>
+        <button id="accentNextBtn" class="primary">Next </button>
+      </div>
+    </section>
+    <section id="levelScreen" class="card hidden">
+      <h2>Select Your Level</h2>
+      <div class="level-grid">
+        <p>🟢 Beginner</p>
+        <img src="images/19.Entry.png" class="level" data-level="Beginner" alt="Beginner">
+        <p>🟡 Easy</p>
+        <img src="Images/20.Basic.png" class="level" data-level="Easy" alt="Easy">
+        <p>🟠 Intermediate</p>
+        <img src="Images/21.Intermidate.png" class="level" data-level="Intermediate" alt="Intermediate">
+        <p>🔵 Advanced</p>
+        <img src="Images/22.Advance.png" class="level" data-level="Advance" alt="Advance">
+      </div>
+      
+      <div class="row">
+        <button id="levelBackBtn" class="secondary">⬅ Back</button>
+      </div>
+    </section>
+    <section id="gameArea" class="card hidden">
+      <h2 id="currentPlayer">Spell the Word</h2>
+      <p id="timerDisplay" class="hidden"></p>
+      <div class="controls">
+        <button id="speakBtn" class="primary">🔊 Speak Word</button>
+        <input type="text" id="answerInput" placeholder="Type your spelling...">
+        <div class="row">
+          <button id="skipBtn" class="secondary">⏭ Skip</button>
+          <button id="submitBtn" class="primary">Submit</button>
+          <button id="endGameBtn" class="secondary">❌ End</button>
+        </div>
+      </div>
+      
+      <p id="message"></p>
+      <p id="scoreDisplay">Score: 0</p>
+      <p id="chancesDisplay">Chances left: 0</p>
+
+      <div id="wordInfo" class="hidden">
+        <p><strong>Meaning:</strong> <span id="meaning"></span></p>
+        <p><strong>Synonyms:</strong> <span id="synonyms"></span></p>
+      </div>
+
+      <button id="nextWordBtn" class="primary hidden">Next Word ➡</button>
+    </section>
+    <section id="gameOver" class="card hidden">
+      <img src="https://media.istockphoto.com/id/1325433246/video/game-over-text-animation-with-alpha-channel-4k.jpg?s=640x640&k=20&c=aZM_cNmjuXVVkLm12evzXTU0qFhAu3Vh2_2W_h-eq3c=" alt="Game Over" class="game-over-img">
+      <p id="finalScore"></p>
+      <div class="row">
+        <button id="restartBtn" class="primary">Restart</button>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
